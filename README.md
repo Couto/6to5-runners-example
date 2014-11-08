@@ -1,7 +1,7 @@
 # 6to5 task runners example
 
 ```
-git clone git@github.com/Couto/6to5-runners-example
+git clone git@github.com:Couto/6to5-runners-example.git
 cd 6to5-runners-example
 npm install
 npm start
