@@ -18,5 +18,6 @@ Available commands:
  * `npm run webpack` - Runs webpack 
  * `npm run grunt` - Runs grunt 
  * `npm run gulp` - Runs gulp
+ * `npm run 6to5` - Runs 6to5 cli
 
 All generated files end up in the `build` directory on a folder of it's own.
