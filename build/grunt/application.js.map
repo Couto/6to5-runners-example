@@ -1,1 +1,0 @@
-{"version":3,"file":"app/Animal.js","sources":["app/Animal.js"],"names":[],"mappings":";;;;;;;;MAAO,CAAC,CAAC;;EAET,CAAC,CAAC,EAAE,CAAC,CAAC,EAAE,EAAE,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC;EACnB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC","sourcesContent":["import Joe from './Joe.js';\n\nvar joe = new Joe();\njoe.run();\n"]}
