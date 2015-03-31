@@ -20,4 +20,4 @@ Available commands:
  * `npm run gulp` - Runs gulp
  * `npm run babel` - Runs babel cli
 
-All generated files end up in the `build` directory on a folder of it's own.
+All generated files end up in the `build` directory on a folder of its own.
