@@ -15,7 +15,11 @@ module.exports = {
 
     module: {
         loaders: [
-            { test: /\.js$/, loader: '6to5-loader?runtime=lol&experimental=true', exclude: /node_modules/},
+            {
+                test: /\.js$/,
+                loader: 'babel?experimental&optional[]=runtime',
+                exclude: /node_modules/
+            },
         ]
     }
 };

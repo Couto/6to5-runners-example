@@ -1,21 +1,28 @@
 var gulp = require('gulp'),
-    to5 = require('gulp-6to5'),
-    browserify = require('gulp-browserify');
+    babel = require('gulp-babel'),
+    browserify = require('browserify'),
+    transform = require('vinyl-transform');
 
-gulp.task('6to5', function () {
+gulp.task('babel', function () {
     return gulp.src('app/**/*.js')
-        .pipe(to5({
+        .pipe(babel({
             modules: 'common',
-            runtime: true,
+            optional: ['runtime'],
             experimental: true
         }))
-        .pipe(gulp.dest('build/gulp'));
+        .pipe(gulp.dest('build/gulp/'));
 });
 
 gulp.task('browserify', function () {
+    // transform regular node stream to gulp (buffered vinyl) stream
+    var browserified = transform(function (filename) {
+        var b = browserify({ entries: filename, debug: true });
+        return b.bundle();
+    });
+
     return gulp.src('build/gulp/application.js')
-        .pipe(browserify())
-        .pipe(gulp.dest('build/gulp/bundle.js'));
+        .pipe(browserified)
+        .pipe(gulp.dest('build/gulp/bundle'));
 });
 
-gulp.task('default', ['6to5', 'browserify']);
+gulp.task('default', ['babel', 'browserify']);

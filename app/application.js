@@ -1,8 +1,4 @@
 /* jshint esnext: true */
-require('6to5/runtime');
-require('6to5/polyfill');
-
-
 
 import Joe from './Joe.js';
 

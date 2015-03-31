@@ -1,13 +1,13 @@
 module.exports = function (grunt) {
     'use strict';
 
-    grunt.loadNpmTasks('grunt-6to5');
+    grunt.loadNpmTasks('grunt-babel');
     grunt.loadNpmTasks('grunt-browserify');
 
     grunt.initConfig({
-        '6to5': {
+        'babel': {
             options: {
-                runtime: true,
+                optional: ['runtime'],
                 experimental: true
             },
             dist: {
@@ -22,12 +22,14 @@ module.exports = function (grunt) {
 
         'browserify': {
             dist: {
-                'build/grunt/bundle.js': ['build/grunt/application.js']
+                files: {
+                    'build/grunt/bundle.js': 'build/grunt/application.js'
+                }
             }
         }
 
     });
 
-    grunt.registerTask('default', ['6to5', 'browserify']);
+    grunt.registerTask('default', ['babel', 'browserify']);
 
 };
