@@ -1,0 +1,8 @@
+{
+  "stage": 0,
+  "optional": ["runtime"],
+  "experimental": true,
+  "ignore": [
+    "bar/**/*.js"
+  ]
+}

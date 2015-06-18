@@ -17,8 +17,12 @@ module.exports = {
         loaders: [
             {
                 test: /\.js$/,
-                loader: 'babel?experimental&optional[]=runtime',
-                exclude: /node_modules/
+                loader: 'babel',
+                exclude: /node_modules/,
+                query: {
+                  babelrc: true,
+                  cacheDirectory: true,
+                }
             },
         ]
     }

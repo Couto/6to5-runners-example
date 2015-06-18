@@ -3,7 +3,7 @@ import Person from './Person.js';
 class Joe extends Person {
 
     constructor () {
-        Person.call(this);
+        super()
         this.genre = 'male';
         this.name = 'Joe';
     }
